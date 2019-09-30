@@ -13,6 +13,7 @@ export function logClass(target: Function) {
 
     // the new constructor behaviour
     const f: any = function (...args) {
+        // 代理后，进行处理，再调用原有的原型实例。
         console.log("New: " + original['name']);
         return construct(original, args);
     }

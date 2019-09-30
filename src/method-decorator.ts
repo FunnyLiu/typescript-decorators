@@ -1,5 +1,5 @@
 import "reflect-metadata";
-
+// 可接受参数的方法装饰器
 export function configureMethod(
     { enumerable = true, configurable = true, writable = true }: { [key: string]: boolean }
 ) {
@@ -15,6 +15,7 @@ export function configureMethod(
         return propertyDesciptor;
     }
 }
+// 不接受参数的方法装饰器
 export function logMethod(
     target: Object,
     propertyName: string,
